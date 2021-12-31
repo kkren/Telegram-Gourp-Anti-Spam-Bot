@@ -3,7 +3,7 @@ import requests
 # from bot import allow_user
 import json
 import configparser
-from redisInstance import redis_instance
+# from redisInstance import redis_instance
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -26,7 +26,7 @@ def recaptcha():
         payload = {'response':captcha_response, 'secret':app.config['reCAPTCHA_SCRECT_KEY']}
         response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
         response_text = json.loads(response.text)
-    return render_template('index.html', key=config['reCAPTCHA_SITE_KEY'])
+    return render_template('index.html', key=config['BOT']['reCAPTCHA_SITE_KEY'])
 
 
 @app.errorhandler(404)
