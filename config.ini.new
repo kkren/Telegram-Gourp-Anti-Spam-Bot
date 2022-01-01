@@ -2,6 +2,21 @@
 reCAPTCHA_SITE_KEY = 
 reCAPTCHA_SCRECT_KEY = 
 
+CHALLENGE_URL =
+
+GROUP_WHITELIST = [
+    '',
+]
+
+CHALLENGE_MESSAGE = "[{target}](tg://user?id={target_id}) :\n\nPlease solve the following captcha to prove you are human. You have {timeout} seconds to do so."
+SUCCESS_MESSAGE = "You have successfully solved the captcha."
+FAILURE_MESSAGE = "You have failed to solve the captcha."
+
+CHALLENGE_TIMEOUT = 30
+CHALLENGE_COOLDOWN = 60
+CHALLENGE_DURATION = 3600
+ENABLE_CHALLENGE_BYPASS = True
+
 BOT_TOKEN = 
 BOT_API_ID = 
 BOT_API_HASH = 
